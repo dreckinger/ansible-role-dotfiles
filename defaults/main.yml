@@ -1,9 +1,14 @@
 ---
-dotfiles_repo: "https://github.com/geerlingguy/dotfiles.git"
+dotfiles_repo: "https://github.com/dreckinger/dotfiles.git"
 dotfiles_repo_local_destination: "~/Documents/dotfiles"
 dotfiles_home: "~"
 dotfiles_files:
   - .bash_profile
+  - .bashrc
   - .gitignore
-  - .inputrc
+  - .gitignore_global
+  - .gitconfig
+  - .tmux.conf
   - .vimrc
+  - .zprofile
+  - .zshrc

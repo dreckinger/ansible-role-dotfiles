@@ -1,8 +1,6 @@
 # Ansible Role: Dotfiles
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-dotfiles.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-dotfiles)
-
-Installs a set of dotfiles from a given Git repository. By default, it will install my (geerlingguy's) [dotfiles](https://github.com/geerlingguy/dotfiles), but you can use any set of dotfiles you'd like, as long as they follow a conventional format.
+Installs a set of dotfiles from a given Git repository. By default, it will install my (dreckinger's) [dotfiles](https://github.com/dreckinger/dotfiles), but you can use any set of dotfiles you'd like, as long as they follow a conventional format.
 
 ## Requirements
 
@@ -12,7 +10,7 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    dotfiles_repo: "https://github.com/geerlingguy/dotfiles.git"
+    dotfiles_repo: "https://github.com/dreckinger/dotfiles.git"
 
 The git repository to use for retrieving dotfiles. Dotfiles should generally be laid out within the root directory of the repository.
 
@@ -26,9 +24,14 @@ The home directory where dotfiles will be linked. Generally, the default should 
 
     dotfiles_files:
       - .bash_profile
+      - .bashrc
       - .gitignore
-      - .inputrc
+      - .gitignore_global
+      - .gitconfig
+      - .tmux.conf
       - .vimrc
+      - .zprofile
+      - .zshrc
 
 Which files from the dotfiles repository should be linked to the `dotfiles_home`.
 
@@ -40,7 +43,7 @@ None
 
     - hosts: localhost
       roles:
-        - { role: geerlingguy.dotfiles }
+        - { role: dreckinger.dotfiles }
 
 ## License
 
